@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>plane</title>
+    <style>
+        body {
+            margin: auto;
+        }
+        div,html,body{height:100%;overflow:hidden;}
+    </style>
+    <script src="asset/js/lib/phaser.js"></script>
+    <script src="asset/js/lib/stats.min.js"></script>
+    <script src="asset/js/state/boot.js"></script>
+    <script src="asset/js/state/load.js"></script>
+    <script src="asset/js/state/menu.js"></script>
+    <script src="asset/js/state/play.js"></script>
+    <script>
+        var game = new Phaser.Game(800, 600, Phaser.AUTO, 'container');
+        game.state.add('boot',bootState);
+        game.state.add('load',loadState);
+        game.state.add('menu',menuState);
+        game.state.add('play',playState);
+        game.state.start('boot');
+    </script>
+</head>
+<body>
+<div style="background-color: dimgray" id="container"></div>
+</body>
+</html>
